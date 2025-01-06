@@ -1,0 +1,68 @@
+form {
+  border: 1px solid black;
+  padding: 10px;
+  section {
+    border: 1px solid rgb(201, 199, 199);
+    padding: 10px;
+    hr {
+      margin-bottom: 50px;
+    }
+
+    .text-box {
+      border: 1px solid rgb(44, 44, 44);
+      padding: 10px;
+      margin-bottom: 50px;
+
+      span {
+        color: rgb(117, 116, 116);
+      }
+      input {
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        border: 0.5px solid rgb(201, 199, 199);
+        box-sizing: border-box;
+      }
+    }
+  }
+}
+
+.wrapper {
+  display: flex;
+  gap: 0.5rem;
+  max-width: 100%;
+  flex-wrap: wrap;
+}
+
+.fw-25 {
+  width: 23%;
+}
+
+.fw-50 {
+  width: 47%;
+}
+
+.fw-75 {
+  width: 73%;
+}
+
+.fw-100 {
+  width: 97%;
+}
+
+.fw-auto {
+  width: auto;
+}
+
+.flex-grow {
+  flex-grow: 1;
+}
+
+@media screen and (max-width: 768px) {
+  .fw-25,
+  .fw-50,
+  .fw-75,
+  .fw-100 {
+    width: 100%;
+  }
+}
