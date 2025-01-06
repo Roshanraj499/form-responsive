@@ -1,0 +1,23 @@
+form {
+  border: 1px solid black;
+  padding: 10px;
+  section {
+    border: 1px solid rgb(201, 199, 199);
+    padding: 10px;
+    div {
+      border: 1px solid rgb(0, 0, 0);
+      padding: 10px;
+      margin-bottom: 10px;
+      span {
+        color: rgb(117, 116, 116);
+      }
+      input {
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        border: 0.5px solid rgb(201, 199, 199);
+        box-sizing: border-box;
+      }
+    }
+  }
+}
