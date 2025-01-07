@@ -1,0 +1,17 @@
+
+<div class="section-container" [ngStyle]="{ 'width': config!.width }">
+    <div *ngIf="!isConfigurationValid; else validConfiguration" class="error-message">
+        {{ invalidConfigText }}
+    </div>
+    <ng-template #validConfiguration>
+        <div class="section-header" role="region" aria-labelledby="section-header">
+            <img *ngIf="config?.icon" [src]="config?.icon" alt="Section Icon" class="section-icon"/>
+                {{ config?.title | translate: locale}} 
+        </div>
+    
+        <ng-container class="section-content">
+            <naq-container [children]="config.children" [(dataModel)]="dataModel!" class="widget-element-container" [locale]="locale">
+            </naq-container>
+        </ng-container>
+    </ng-template>    
+</div>

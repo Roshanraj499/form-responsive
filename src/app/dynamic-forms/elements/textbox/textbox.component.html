@@ -1,0 +1,24 @@
+<div class="box input-container">
+	<ng-container *ngIf="isConfigurationValid; else invalidTemplate">
+    <naq-field-annotations 
+			[config]="config"
+			[formControlId]="id"
+			[locale]="locale">
+		</naq-field-annotations>
+		<input
+      type="text"
+      class="input-field"
+      [attr.id]="id"
+      [ngModel]="value"
+      [attr.aria-label]="ariaLabel"
+      (ngModelChange)="handleModelChange($event)"
+      [disabled]="config.isDisabled!"
+      [placeholder]="placeholder"
+    />
+	</ng-container>
+	<ng-template #invalidTemplate>
+		<div class="alert-error">
+			{{ invalidConfigText }}
+		</div>
+	</ng-template>
+</div>

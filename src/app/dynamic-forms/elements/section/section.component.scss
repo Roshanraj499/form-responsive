@@ -1,0 +1,55 @@
+@import '../../../../../node_modules/@toyota/naqp-dev-web-core-framework-library/assets/styles/core-lib-variables';
+
+.section-container {
+    margin: $spacing-4 $spacing-0;
+    padding: $spacing-4;
+    border-radius: $radius-2;
+    border: 0.06rem solid $palette-grey-200;
+}
+
+.widget-element-container {
+    gap: $gap-md;
+    flex-direction: row;
+    align-items: center;
+    margin: $spacing-4;
+}
+
+.section-header {
+    display: flex;
+    align-items: center;
+    border-bottom: 0.06rem solid $palette-grey-300;
+    height: 2.00rem;
+}
+
+.section-icon {
+    display: flex;
+    margin-right: $spacing-4;
+}
+
+/* Section content styling */
+.section-content {
+    margin-top: $spacing-4;
+}
+
+/* Error message styling */
+.error-message {
+    color: $text-danger;
+    font-size: 1rem;
+    margin-top: $spacing-4;
+    border: 0.06rem solid $text-danger;
+    padding: $spacing-4;
+    border-radius: $radius-2;
+}
+
+/* Responsive styles */
+@media (max-width: $breakpoint-sm) {
+    .section-container {
+        padding: $spacing-5;
+        margin: $spacing-5 $spacing-0;
+    }
+
+    .section-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}

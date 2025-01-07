@@ -1,0 +1,45 @@
+@import '../../../../../node_modules/@toyota/naqp-dev-web-core-framework-library/assets/styles/core-lib-variables';
+
+
+.input-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-field {
+    padding: 12px;
+    border: 1px solid $palette-grey-300;
+    border-radius: 4px;
+    outline: none;
+    transition: border-color 0.3s ease-in-out;
+    background: $palette-grey-white;
+}
+
+.input-field:focus {
+    border-color: $palette-primary-500;
+    box-shadow: 0 0 5px rgba(98, 0, 234, 0.5);
+}
+
+.input-field::placeholder {
+    color: $palette-grey-500;
+    font-style: italic;
+}
+
+.input-field:hover {
+    border: 1px solid $palette-primary-400;
+}
+
+.input-field:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    border: 1px solid $palette-grey-300;
+    background-color: $palette-grey-white;
+}
+
+
+.alert-error{
+    background: $palette-red-50;
+    border: 1px solid $palette-red-500;
+    border-radius: 4px;
+    padding: 12px;
+}
