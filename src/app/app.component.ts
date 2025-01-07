@@ -24,6 +24,7 @@ export class AppComponent implements OnInit {
       children: [
         {
           type: 'Section',
+          width: 'full',
           title: {
             en: 'section',
             es: 'sección',
@@ -53,7 +54,7 @@ export class AppComponent implements OnInit {
               dataKey: 'caseInfo.Vin',
               width: 'quarter',
               label: {
-                en: 'textbox2',
+                en: 'half',
                 es: 'spanish textbox',
                 fr: '',
               },
@@ -64,9 +65,64 @@ export class AppComponent implements OnInit {
             {
               type: 'Textbox3',
               dataKey: 'caseInfo.Vin',
-              width: 'quarter',
+              width: 'half',
               label: {
                 en: 'textbox2',
+                es: 'spanish textbox',
+                fr: '',
+              },
+              validation: {
+                isOptional: true,
+              },
+            },
+            // {
+            //   type: 'Textbox3',
+            //   dataKey: 'caseInfo.Vin',
+            //   width: 'quarter',
+            //   label: {
+            //     en: 'textbox2',
+            //     es: 'spanish textbox',
+            //     fr: '',
+            //   },
+            //   validation: {
+            //     isOptional: true,
+            //   },
+            // },
+          ],
+        },
+        {
+          type: 'Section',
+          width: 'full',
+          title: {
+            en: 'section',
+            es: 'sección',
+            fr: 'section',
+          },
+          children: [
+            {
+              type: 'Textbox',
+              dataKey: 'caseInfo.Vin',
+              width: 'quarter',
+              label: {
+                en: 'textbox',
+                es: 'es txt',
+                fr: 'fr txt',
+              },
+              tooltip: {
+                en: 'en tool',
+                es: 'es tool',
+                fr: 'fr tool',
+              },
+              validation: {
+                isRequired: false,
+              },
+            },
+            {
+              type: 'Textbox',
+              dataKey: 'caseInfo.Vin',
+              width: 'quarter',
+              label: {
+                en: 'half',
                 es: 'spanish textbox',
                 fr: '',
               },
@@ -77,7 +133,7 @@ export class AppComponent implements OnInit {
             {
               type: 'Textbox3',
               dataKey: 'caseInfo.Vin',
-              width: 'quarter',
+              width: 'half',
               label: {
                 en: 'textbox2',
                 es: 'spanish textbox',
@@ -87,14 +143,27 @@ export class AppComponent implements OnInit {
                 isOptional: true,
               },
             },
+            // {
+            //   type: 'Textbox3',
+            //   dataKey: 'caseInfo.Vin',
+            //   width: 'quarter',
+            //   label: {
+            //     en: 'textbox2',
+            //     es: 'spanish textbox',
+            //     fr: '',
+            //   },
+            //   validation: {
+            //     isOptional: true,
+            //   },
+            // },
           ],
         },
       ],
     },
   };
 
-  getWidthClassName(width: string, section: any, index: number): string {
-    const lastIndex = section.children.length - 1;
+  getWidthClassName(width: string, length: number, index: number): string {
+    const lastIndex = length - 1;
     if (index === lastIndex) {
       return 'flex-grow';
     }
@@ -106,10 +175,6 @@ export class AppComponent implements OnInit {
       case 'third':
         return 'fw-75';
       default:
-        console.log(
-          `${width} of ${section.textBox.label.en} is not a valid width`
-        );
-
         return 'fw-auto'; // Default case for unknown values
     }
   }
